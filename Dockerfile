@@ -12,5 +12,7 @@ RUN install --directory --owner=redis --group=redis --mode=777 /run/redis-openva
 RUN touch /var/log/redis/redis-server-openvas.log && chmod 777 /var/log/redis/redis-server-openvas.log
 RUN runuser -u redis -- redis-server /etc/redis/redis-openvas.conf && gvm-setup
 COPY launch.sh /
-RUN chmod +x /launch.sh
+COPY executeScript.sh /
+COPY gvm_bash.sh /
+RUN chmod +x /launch.sh /executeScript.sh /gvm_bash.sh
 CMD /launch.sh
