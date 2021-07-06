@@ -16,6 +16,8 @@ chmod -R 777 /var/run/gvm ; chmod -R 777 /home/admin
 #to allow use of scan configs
 runuser -u _gvm -- greenbone-nvt-sync
 
+sleep 900
+
 runuser -u _gvm -- gvmd --get-scanners | grep "OpenVAS" > scanner-id.txt
 runuser -u _gvm -- gvmd --get-users --verbose | grep "admin" > user-id.txt
 
