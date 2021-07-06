@@ -16,6 +16,7 @@ runuser -u _gvm -- greenbone-nvt-sync
 runuser -u _gvm -- greenbone-scapdata-sync
 runuser -u _gvm -- greenbone-certdata-sync
 
+echo "Starting sleep time of 15 minutes now..."
 sleep 900
 
 runuser -u _gvm -- gvmd --get-scanners | grep "OpenVAS" > scanner-id.txt
