@@ -13,8 +13,8 @@ chmod -R 777 /var/run/gvm ; chmod -R 777 /home/admin
 
 #to allow use of scan configs
 runuser -u _gvm -- greenbone-nvt-sync
-runuser -u _gvm -- greenbone-scapdata-sync
-runuser -u _gvm -- greenbone-certdata-sync
+#runuser -u _gvm -- greenbone-scapdata-sync
+#runuser -u _gvm -- greenbone-certdata-sync
 
 echo "Starting sleep time of 30 minutes now..."
 sleep 1800
