@@ -14,5 +14,7 @@ RUN runuser -u redis -- redis-server /etc/redis/redis-openvas.conf && gvm-setup
 COPY launch.sh /
 COPY executeScript.sh /
 COPY gvm_bash.sh /
-RUN chmod +x /launch.sh /executeScript.sh /gvm_bash.sh
+RUN chmod +x /launch.sh
+RUN chmod +x /executeScript.sh
+RUN chmod +x /gvm_bash.sh
 CMD /launch.sh
