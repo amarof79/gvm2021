@@ -36,7 +36,7 @@ cd / ; cp gvm_bash.sh /home/admin ; cd /home/admin
 sed -i -e 's/\r$//' /home/admin/gvm_bash.sh
 sed -i -e 's/^M$//' /home/admin/gvm_bash.sh
 
-./gvm_bash.sh 127.0.0.1
+./gvm_bash.sh 172.19.0.6
 
 
 
